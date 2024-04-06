@@ -1,0 +1,35 @@
+header
+
+  .container
+    background-color: #111  // Noir charbon
+    border-radius: 30px
+
+    .navbar-brand
+      color: white
+
+    .navbar-nav
+      margin: 0 auto // Centrer les liens de navigation horizontalement
+      display: flex // Utilisation de flexbox pour centrer les éléments enfants
+
+    .nav-item
+      margin-right: 15px
+
+      .btn-outline-dark
+        color: orangered
+
+    .nav-link
+      color: white
+      transition: color 0.3s // Ajout d'une transition pour une animation fluide lors du survol
+
+    .nav-link:hover, .btn-outline-dark
+      color: orangered
+
+    .nav-link.active, .nav-link.active:hover
+      color: white
+
+    .white
+      color: white
+
+    .bi-person-circle
+      color: orangered
+
