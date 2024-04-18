@@ -1,0 +1,68 @@
+<section class="content mt-3">
+  <div class="container p-2">
+    <div class="mt-3">
+      <h4 class="title-content mt-5">découvrez nos produits les plus populaires</h4>
+    </div>
+    <div class="mt-4 p-1">
+      <ul class="product-navigation">
+        <li><a href="#" class="active-link">Toutes les Catégories</a></li>
+        @for (categoryProduct of categories(); track categoryProduct.name) {
+          <li><a href="#" class="" (click)="onSelectedCategory(categoryProduct.name)">{{categoryProduct.name}}</a></li>
+        }
+        <li class="see-more">voir plus de produits <i class="bi-chevron-bar-right"></i></li>
+      </ul>
+    </div>
+    <div class="container p-1">
+        <div class="row">
+          @for (product of selectedCategory(); track product.name){
+            <div class="col-md-3 p-2 m-1">
+              <a>
+                <img class="product-image shadow" src="{{product.imageLink}}" alt="">
+                <p>{{product.name}} <br> ${{product.price}}</p>
+              </a>
+            </div>
+          }
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--<section class="content mt-3">-->
+<!--  <div class="container p-2">-->
+<!--    <div class="mt-3">-->
+<!--      <h4 class="title-content mt-5">découvrez nos produits les plus populaires</h4>-->
+<!--    </div>-->
+<!--    <div class="mt-4 p-1">-->
+<!--      <ul class="product-navigation">-->
+<!--        <li><a href="#" class="active-link">Toutes les Catégories</a></li>-->
+<!--        @for (categoryProduct of categories(); track categoryProduct.name) {-->
+<!--          <li><a href="#" class="" (click)="onSelectedCategory(categoryProduct.name)">{{categoryProduct.name}}</a></li>-->
+<!--        }-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="container p-1">-->
+<!--      @if (selectedCategory() && selectedCategory().length > 0) {-->
+<!--        @for (let i = 0; i < selectedCategory().length; i += 4) {-->
+<!--          <div class="row">-->
+<!--            @for (let j = i; j < Math.min(i + 4, selectedCategory().length); j ++)-->
+<!--            <div class="col-md-3">-->
+<!--              <div class="product-card">-->
+<!--                <img class="product-image" src="{{ selectedCategory()[j].imageLink }}"-->
+<!--                     alt="{{ selectedCategory()[j].name }}">-->
+<!--                <div class="product-details">-->
+<!--                  <h5 class="product-name">{{ selectedCategory()[j].name }}</h5>-->
+<!--                  <p class="product-description">{{ selectedCategory()[j].description }}</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            @endfor-->
+<!--          </div>-->
+<!--        }-->
+<!--      }-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->

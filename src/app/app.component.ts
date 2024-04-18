@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {HeaderComponent} from "./homePage/header/header.component";
-import {BannerComponent} from "./homePage/banner/banner.component";
-import {ContentComponent} from "./homePage/content/content.component";
+import {HeaderComponent} from "./page/header/header.component";
+import {BannerComponent} from "./page/homePage/banner/banner.component";
+import {ContentComponent} from "./page/homePage/content/content.component";
 
 @Component({
   selector: 'app-root',
